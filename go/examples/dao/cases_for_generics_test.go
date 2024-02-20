@@ -18,7 +18,7 @@ type Struct struct {
 }
 
 func TestStructUnmarshal(t *testing.T) {
-	s, err := UnmarshalJSON[Struct]([]byte(`{"Field": "hello world"}`))
+	s, err := UnmarshalJSON[Stuct]([]byte(`{"Field": "hello world"}`))
 	assert.NoError(t, err)
 	assert.Equal(t, s.Field, "hello world")
 }
